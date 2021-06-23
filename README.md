@@ -1,67 +1,28 @@
-<!-- <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
-
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p> -->
-
 # Paymedy Test
 
-## Getting Started
-Run `php artisan serve` from the root directory
+## Process 
 
-<!-- ## About Laravel
+1. Used Brew to install composer
+2. Used composer to install laravel
+3. Followed directions to install TALL stack 
+4. Exported the Paymedy and icon’s out of the design as SVG’s and set them up as blade components
+5. Mocked out the application level layout with the navigation to get the general page structure in place.
+6. Started working through each of the “components” on the page. Abstracting them into new blade components to make life easier for me to implement repetitive UI elements. This paid off when implementing the case history container.
+7. Ran a Lighthouse check on my local dev site just to check off any major issues with web vitals. There’s definitely some performance issues outstanding but these seem to mostly relate to hosting on local dev and lack of caching.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Comments
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+1. As mobile/tablet designs haven’t been provided I have not applied any tablet or mobile specific classes to address issues with these viewports. We’d probably need a lot more art direction here to tackle issues with the main and sidebar navigation elements as well as figuring out how best to collapse the main content area down to single column.
+2. I took a bit of artistic license with the Case Details area:
+    1. Removed the underlines. I felt they were adding to the visual clutter of the area and were somewhat distracting. Good use of white-space here should be enough in my opinion.
+    2. Used lowercase text for the form labels, this should reduce cognitive load and is slightly quicker and easier for users to read. 
+    3. Moved labels below the value. The value carries more importance/relevancy so should theoretically sit higher in the visual hierarchy. If the user is unsure what the data represents, it takes a quick glance down to reconfirm what the value represents.
+    4. Removed duplicate label/values for Product and Value
+    5. Added a link to the customer name to link to their record. Applied the yellow colour from the Action Required button as that seemed the most appropriate accent colour that also provided good contrast ratio with the grey background.
+3. I used a darker blue on the notification. The blue that was provided didn’t offer enough contrast for accessibility purposes which was being flagged in a web vitals check.
+4. I thought there might be some value in having the “Defend this dispute” text be a button. It seemed that if you’re calling attention to it, you might as well offer the User the ability to “defend” here rather than require them to scroll to the actions bar further down the page.
+5. Lighthouse reports some accessibility issues with contrast when using the Paymedy red as a background with white-text. Since this is a brand colour I didn’t make any changes to resolve this.
+6. I wasn’t sure about the filters next to Merchant and Consumer. I think this would be simpler and easier for the user to have a single filter mechanism. Just thinking in a theoretical case where you might want to combine filters across both columns. Using two separate filter systems could require more time to add/remove filters.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
-## Learning Laravel
-
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT). -->
+With more time my next steps would be to work on the interactive elements such as filter system, dismissing alerts.
