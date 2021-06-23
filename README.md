@@ -1,5 +1,11 @@
 # Paymedy Test
 
+## Get Started
+
+* `composer install`
+* `npm install`
+* `php artisan serve`
+
 ## Process 
 
 1. Used Brew to install composer
