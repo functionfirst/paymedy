@@ -1,4 +1,4 @@
-<?php $__env->startSection('title', 'Case Details #668919 - Protect'); ?>
+<?php $__env->startSection('title', '#668919 Case Details - Protect'); ?>
 
 <?php $__env->startSection('content'); ?>
     <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>

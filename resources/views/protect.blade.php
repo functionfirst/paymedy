@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Case Details #668919 - Protect')
+@section('title', '#668919 Case Details - Protect')
 
 @section('content')
     <x-notification
