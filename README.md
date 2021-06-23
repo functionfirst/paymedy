@@ -30,6 +30,7 @@
 5. I thought there might be some value in having the “Defend this dispute” text be a button. It seemed that if you’re calling attention to it, you might as well offer the User the ability to “defend” here rather than require them to scroll to the actions bar further down the page.
 6. Lighthouse reports some accessibility issues with contrast when using the Paymedy red as a background with white-text. Since this is a brand colour I didn’t make any changes to resolve this.
 7. I wasn’t sure about the filters next to Merchant and Consumer. I think this would be simpler and easier for the user to have a single filter mechanism. Just thinking in a theoretical case where you might want to combine filters across both columns. Using two separate filter systems could require more time to add/remove filters.
+8. I've deliberately used equal padding around the edge of the case history items in the bottom list. I just felt that this route offered cleaner parallel lines around the curved edge of the items.
 
 
 With more time my next steps would be to work on the interactive elements such as filter system, dismissing alerts.
