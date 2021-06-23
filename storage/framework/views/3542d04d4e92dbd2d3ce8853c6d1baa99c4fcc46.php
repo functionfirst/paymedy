@@ -1,6 +1,6 @@
 <?php $__env->startSection('body'); ?>
     <div class="">
-        <div class="bg-white shadow-md top-0">
+        <div class="bg-white shadow-md sticky top-0">
             <div class="flex max-w-6xl mx-auto items-center justify-between py-1.5">
                 <div class="flex items-center">
                     <a
