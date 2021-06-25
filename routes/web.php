@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProtectController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -13,55 +15,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::view('/', 'protect')->name('home');
-Route::get('/', function () {
-  return view('protect', [
-    'name' => 'James',
-    'navigation' => [
-        [
-            'name' => 'Discover',
-            'active' => false,
-            'route' => 'home',
-            'icon' => 'icon.tag'
-        ],
-        [
-            'name' => 'Grow',
-            'active' => false,
-            'route' => 'home',
-            'icon' => 'icon.arrow-expanded'
-        ],
-        [
-            'name' => 'Protect',
-            'active' => true,
-            'route' => 'home',
-            'icon' => 'icon.shield-check'
-        ]
-    ],
-    'sidebar' => [
-        [
-            'icon' => 'icon.clock',
-            'name' => 'Case activity',
-            'route' => 'home',
-            'active' => true
-        ],
-        [
-            'icon' => 'icon.template',
-            'name' => 'Templates',
-            'route' => 'home',
-            'active' => false
-        ],
-        [
-            'icon' => 'icon.chart-pie',
-            'name' => 'Performance',
-            'route' => 'home',
-            'active' => false
-        ],
-        [
-            'icon' => 'icon.bell',
-            'name' => 'Notifications',
-            'route' => 'home',
-            'active' => false
-        ]
-    ]
-  ]);
-})->name('home');
+Route::get('/', [ProtectController::class, 'show'])->name('home');

@@ -1,5 +1,5 @@
 <div
-    class="alert flex bg-yellow-200 text-yellow-800 px-4 py-2 rounded-full"
+    class="alert flex items-center bg-yellow-200 text-yellow-800 px-4 py-2 rounded-full"
     role="alert"
 >
     <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
