@@ -1,8 +1,8 @@
 <?php $__env->startSection('body'); ?>
     <div class="">
-        <div class="bg-white shadow-md sticky top-0">
-            <div class="flex max-w-6xl mx-auto items-center justify-between py-1.5">
-                <div class="flex items-center">
+        <div class="bg-white shadow-md sticky top-0 z-50">
+            <div class="flex max-w-6xl mx-auto items-center justify-center gap-6 md:justify-between md:py-1.5">
+                <div class="flex gap-6 items-center">
                     <a
                         href="<?php echo e(route('home')); ?>"
                         class="flex items-center justify-center text-brand hover:text-gray-900 h-12 w-12"
@@ -38,20 +38,20 @@
 <?php endif; ?>
                 </div>
                 <div class="flex gap-6 text-sm">
-                    <a href="#signout" class="transition-colors flex items-center text-gray-700 hover:text-gray-900 group font-semibold">
+                    <a href="#signout" class="w-12 h-12 gap-2 md:w-auto justify-center transition-colors flex items-center text-gray-700 hover:text-gray-900 group font-semibold">
                         <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
-<?php $component = $__env->getContainer()->make(Illuminate\View\AnonymousComponent::class, ['view' => 'components.icon.logout','data' => ['class' => 'transition-colors w-5 mr-2 text-gray-400 group-hover:text-gray-600']]); ?>
+<?php $component = $__env->getContainer()->make(Illuminate\View\AnonymousComponent::class, ['view' => 'components.icon.logout','data' => ['class' => 'transition-colors w-5 text-gray-400 group-hover:text-gray-600']]); ?>
 <?php $component->withName('icon.logout'); ?>
 <?php if ($component->shouldRender()): ?>
 <?php $__env->startComponent($component->resolveView(), $component->data()); ?>
-<?php $component->withAttributes(['class' => 'transition-colors w-5 mr-2 text-gray-400 group-hover:text-gray-600']); ?>
+<?php $component->withAttributes(['class' => 'transition-colors w-5 text-gray-400 group-hover:text-gray-600']); ?>
 <?php if (isset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4)): ?>
 <?php $component = $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4; ?>
 <?php unset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4); ?>
 <?php endif; ?>
 <?php echo $__env->renderComponent(); ?>
 <?php endif; ?>
-                        Sign out
+                        <span class="hidden md:inline">Sign out</span>
                     </a>
 
                     <a href="#profile" class="flex items-center justify-center h-12 w-12 p-2 rounded-full">
@@ -76,13 +76,13 @@
         </div>
 
         <div>
-            <div class="flex max-w-6xl mx-auto py-8">
+            <div class="lg:flex max-w-6xl mx-2 md:mx-auto py-8">
                 <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
-<?php $component = $__env->getContainer()->make(Illuminate\View\AnonymousComponent::class, ['view' => 'components.sidebar','data' => ['class' => 'w-52','navigation' => $sidebar]]); ?>
+<?php $component = $__env->getContainer()->make(Illuminate\View\AnonymousComponent::class, ['view' => 'components.sidebar','data' => ['class' => 'lg:w-52','navigation' => $sidebar]]); ?>
 <?php $component->withName('sidebar'); ?>
 <?php if ($component->shouldRender()): ?>
 <?php $__env->startComponent($component->resolveView(), $component->data()); ?>
-<?php $component->withAttributes(['class' => 'w-52','navigation' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute($sidebar)]); ?>
+<?php $component->withAttributes(['class' => 'lg:w-52','navigation' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute($sidebar)]); ?>
 <?php if (isset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4)): ?>
 <?php $component = $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4; ?>
 <?php unset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4); ?>
@@ -90,7 +90,7 @@
 <?php echo $__env->renderComponent(); ?>
 <?php endif; ?>
 
-                <main role="main" class="flex-1 px-8">
+                <main role="main" class="flex-1 md:px-8">
                     <?php echo $__env->yieldContent('content'); ?>
                 </main>
             </div>

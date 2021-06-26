@@ -2,9 +2,9 @@
 
 @section('body')
     <div class="">
-        <div class="bg-white shadow-md sticky top-0">
-            <div class="flex max-w-6xl mx-auto items-center justify-between py-1.5">
-                <div class="flex items-center">
+        <div class="bg-white shadow-md sticky top-0 z-50">
+            <div class="flex max-w-6xl mx-auto items-center justify-center gap-6 md:justify-between md:py-1.5">
+                <div class="flex gap-6 items-center">
                     <a
                         href="{{ route('home') }}"
                         class="flex items-center justify-center text-brand hover:text-gray-900 h-12 w-12"
@@ -18,9 +18,9 @@
                     <x-navigation :navigation="$navigation" />
                 </div>
                 <div class="flex gap-6 text-sm">
-                    <a href="#signout" class="transition-colors flex items-center text-gray-700 hover:text-gray-900 group font-semibold">
-                        <x-icon.logout class="transition-colors w-5 mr-2 text-gray-400 group-hover:text-gray-600" />
-                        Sign out
+                    <a href="#signout" class="w-12 h-12 gap-2 md:w-auto justify-center transition-colors flex items-center text-gray-700 hover:text-gray-900 group font-semibold">
+                        <x-icon.logout class="transition-colors w-5 text-gray-400 group-hover:text-gray-600" />
+                        <span class="hidden md:inline">Sign out</span>
                     </a>
 
                     <a href="#profile" class="flex items-center justify-center h-12 w-12 p-2 rounded-full">
@@ -34,13 +34,13 @@
         </div>
 
         <div>
-            <div class="flex max-w-6xl mx-auto py-8">
+            <div class="lg:flex max-w-6xl mx-2 md:mx-auto py-8">
                 <x-sidebar
-                    class="w-52"
+                    class="lg:w-52"
                     :navigation="$sidebar"
                 />
 
-                <main role="main" class="flex-1 px-8">
+                <main role="main" class="flex-1 md:px-8">
                     @yield('content')
                 </main>
             </div>

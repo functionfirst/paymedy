@@ -28,6 +28,9 @@
         <!-- Styles -->
         <link rel="stylesheet" href="<?php echo e(url(mix('css/app.css'))); ?>">
 
+        <!-- Scripts -->
+        <script src="<?php echo e(mix('js/app.js')); ?>" defer></script>
+
         <!-- CSRF Token -->
         <meta name="csrf-token" content="<?php echo e(csrf_token()); ?>">
     </head>

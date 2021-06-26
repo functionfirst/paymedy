@@ -1,14 +1,13 @@
-<!--
-@todo Implement type prop to allow for different notification types, e.g. warning, alert, error, etc
-This type can define the notification colour and icon type
--->
 <div
-    class="flex items-center justify-between bg-blue-600 text-white rounded-full py-0.5 pl-4 {{ $attributes['class'] }}"
+    class="flex items-start justify-between bg-blue-600 text-white rounded-3xl py-0.5 pl-4 {{ $attributes['class'] }}"
     role="alert"
 >
-    <div class="flex items-center text-sm gap-2">
-        <x-icon.check-circle class="w-5" />
-        {{ $slot }}
+    <div class="flex flex-1 items-start lg:items-center text-sm gap-2 py-3 lg:py-1">
+        <x-icon.check-circle class="w-6" />
+
+        <div class="flex-1">
+            {{ $slot }}
+        </div>
     </div>
 
     <button class="flex items-center justify-center h-12 w-12">

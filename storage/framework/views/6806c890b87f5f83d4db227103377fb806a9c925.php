@@ -1,14 +1,14 @@
 <nav
     role="navigation"
     aria-label="Protect Navigation"
-    class="<?php echo e($attributes['class']); ?> text-sm font-semibold"
+    class="<?php echo e($attributes['class']); ?> text-sm font-semibold mx-2 mb-4 lg:m-0 text-center"
 >
-    <ul class="grid gap-2">
+    <ul class="grid md:flex lg:grid md:justify-center gap-2">
         <?php $__currentLoopData = $navigation; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
             <li>
                 <a
                     href="<?php echo e(route($item['route'])); ?>"
-                    class="flex gap-2 items-center transition-colors group rounded-full py-2 px-4 text-gray-600 hover:text-gray-800 <?php echo e($item['active'] ? 'bg-gray-100 hover:bg-gray-200' : 'hover:bg-gray-100'); ?>"
+                    class="flex-1 flex gap-2 items-center transition-colors group rounded-full py-2 px-4 text-gray-600 hover:text-gray-800 <?php echo e($item['active'] ? 'bg-gray-100 hover:bg-gray-200' : 'hover:bg-gray-100'); ?>"
                 >
                     <?php if (isset($component)) { $__componentOriginal3bf0a20793be3eca9a779778cf74145887b021b9 = $component; } ?>
 <?php $component = $__env->getContainer()->make(Illuminate\View\DynamicComponent::class, ['component' => $item['icon']]); ?>

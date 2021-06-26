@@ -1,5 +1,5 @@
 <section class="rounded-3xl bg-gray-600 text-white p-8 pb-24">
-    <header class="flex items-center justify-between mb-8">
+    <header class="flex flex-col md:flex-row items-center justify-between mb-8 gap-4">
         <h1 class="text-2xl font-extrabold">
             Case Details #668919
         </h1>
@@ -17,7 +17,7 @@
 <?php endif; ?>
     </header>
 
-    <div class="grid grid-cols-2 gap-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div class="flex flex-col-reverse">
             <label class="font-semibold text-xs text-gray-300">Date</label>
 

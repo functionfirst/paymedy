@@ -28,6 +28,9 @@
         <!-- Styles -->
         <link rel="stylesheet" href="{{ url(mix('css/app.css')) }}">
 
+        <!-- Scripts -->
+        <script src="{{ mix('js/app.js') }}" defer></script>
+
         <!-- CSRF Token -->
         <meta name="csrf-token" content="{{ csrf_token() }}">
     </head>
